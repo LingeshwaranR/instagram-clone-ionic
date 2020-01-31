@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="dark">
+        <ion-icon slot="icon-only" name="camera"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      <img src="../../assets/instagram-new-logo.png">
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="dark">
+        <ion-icon slot="icon-only" name="ios-send"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <br>
+
+  <div class="stories">
+    <div class="story" >
+      <div class="add_story">
+        <img src="https://picsum.photos/200">
+        <ion-icon color="primary" name="add-circle"></ion-icon>
+      </div>
+      <p style="color: #86888f;">Lingesh</p>
+    </div>
+    <div class="story" *ngFor="let user of listofusers">
+      <div class="img-box">
+        <img src="https://picsum.photos/200?random={{user.index}}">
+      </div>
+      <p>{{user.name}}</p>
+    </div>
+    
+  </div>
+
+  <hr>
+  <div *ngFor="let image of imageList">
+  <ion-item no-padding lines="none">
+    <ion-avatar slot="start">
+      <img [src]="image.download_url">
+    </ion-avatar>
+    <ion-label>{{image.author}}</ion-label>
+    <ion-icon slot="end" name="more"></ion-icon>
+  </ion-item>
+  <img class="post_img"[src]="image.download_url">
+  <div class="flex-button">
+    <div>
+      <ion-icon name="heart" color="danger"></ion-icon>
+      <ion-icon name="text"></ion-icon>
+      <ion-icon name="send"></ion-icon>
+    </div>
+    <ion-icon name="bookmark"></ion-icon>
+  </div>
+  <p class="insta-text"><b>2.875 Likes</b></p>
+  <p class="insta-text"><b>lisa_franck</b> Abusus enim multitudine hominum, quam tranquillis in rebus diutius rexit, ex agrestibus habitaculis urbes construxit multis opibus firmas et viribus, quarum ad praesens pleraeque licet </p>
+  <br>
+</div>
+  
+
+</ion-content>

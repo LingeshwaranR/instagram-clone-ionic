@@ -1,0 +1,120 @@
+<ion-header>
+  <ion-toolbar>
+    <h4 slot="start">_rlingesh</h4>
+    <ion-buttons slot="start">
+        <ion-icon 
+        name="checkmark-circle" 
+        color="primary"
+        class="arrow-down"
+        ></ion-icon>
+
+      <ion-button color="dark">
+        <ion-icon
+          class="arrow-down"
+          slot="icon-only"
+          name="ios-arrow-down"
+        ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button color="dark">
+        <ion-icon slot="icon-only" size="large" name="menu"></ion-icon>
+      </ion-button>
+      <ion-badge class ="position"  color="danger" >2</ion-badge>
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <br />
+  <div class="stories">
+    <div>
+      <div class="add_story">
+        <img src="https://instagram.fmaa1-4.fna.fbcdn.net/v/t51.2885-19/s320x320/82945954_498531077465470_3328309542244057088_n.jpg?_nc_ht=instagram.fmaa1-4.fna.fbcdn.net&_nc_ohc=LlwRkualDk8AX_NxfLI&oh=955716e6ff0f1f87e18eedcc8dc1b2e3&oe=5EBDA2FC" />
+        <ion-icon color="primary" name="add-circle"></ion-icon>
+      </div>
+    </div>
+    <div class=" followers">
+      <div class="story">
+        <h4 style="text-align: center;">106</h4>
+        <br />
+        <p class="stories-text">Posts</p>
+      </div>
+      <div class="story">
+        <h4 style="text-align: center;">825</h4>
+        <br />
+        <p class="stories-text">Followers</p>
+      </div>
+      <div class="story">
+        <h4 style="text-align: center;">1425</h4>
+        <br />
+        <p class="stories-text">Following</p>
+      </div>
+    </div>
+  </div>
+  <div class="info">
+    <p class="info-name">L I N G E S H</p>
+    <p class="info-text">TVSian | pusuing BE undergrad @ vcet_Mdu</p>
+    <p class="info-text" style="color: rgb(0, 0, 155);">#techfreak</p>
+    <p class="info-text" style="color: rgb(0, 0, 155);">#developer</p>
+    <br/>
+  </div>
+  <ion-button color="dark" expand="block " fill="outline"
+    >  <p style="font-size: 12px; color: black;font-weight: bold;">Edit Profile</p></ion-button
+  >
+  <div class="stories">
+    <div>
+      <div class="img-box">
+        <img style="width: 50px;" src="../../assets/plus-icon.png" />
+      </div>
+      <p style="text-align: center; margin-top: 0px; font-size: 13px;">New</p>
+    </div>
+    <div>
+      <div class="img-box">
+        <img style="width: 50px;" src="https://picsum.photos/200?random=1" />
+      </div>
+      <p  style="text-align: center; margin-top: 0px;font-size: 13px;">Coda</p>
+    </div>
+    <div>
+      <div class="img-box">
+        <img style="width: 50px;" src="https://picsum.photos/200?random=2" />
+      </div>
+      <p style="text-align: center; margin-top: 0px;font-size: 13px;">Code</p>
+    </div>
+    <div>
+      <div class="img-box">
+        <img style="width: 50px;" src="https://picsum.photos/200?random=3" />
+      </div>
+      <p style="text-align: center; margin-top: 0px;font-size: 13px;">r15V3</p>
+    </div>
+    <div>
+      <div class="img-box">
+        <img style="width: 50px;" src="https://picsum.photos/200?random=4" />
+      </div>
+      <p style="text-align: center; margin-top: 0px;font-size: 13px;">Varkala</p>
+    </div>
+    <div>
+      <div class="img-box">
+        <img style="width: 50px;" src="https://picsum.photos/200?random=5" />
+      </div>
+      <p style="text-align: center; margin-top: 0px;font-size: 13px;">fav ❤</p>
+    </div>
+  </div>
+  <ion-segment color="medium">
+    <ion-segment-button>
+      <ion-icon name="grid"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button>
+      <ion-icon name="contact"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+  <div class="grid">
+    <div class="img_box" *ngFor="let image of imageList">
+      <img
+        [src]="image.download_url"
+        height="100px"
+       
+      />
+    </div>
+  </div>
+</ion-content>
